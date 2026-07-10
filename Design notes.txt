@@ -1,0 +1,16 @@
+TODO:
+    - Burst mode?
+    - Set up potentiometer IC
+
+Rlim between RSI and GND sets the maximum allowed current through LDA and LDK.
+Since we're using higher voltages than LDA can supply, we only care about LDK.
+The formula is Imax(LDK) = 700*0.52V / Rlim
+
+Rmd should be set such that the voltage drop over it is 500 mV at the desired power.
+Our laser supposedly puts out 200 uA at nominal power.
+The formula is quite obvious: Rmon = 0.5V / Imon
+At 200 uA, this is 2500 Ohms. If we want to take the power lower, we need higher resistance.
+250 kOhm would result in 1% power. I should get a constant 2.5k and something that can scale from 0 to 100k.
+
+With AVG pulled low, it works in peak power mode. This is good for up to 4 MHz.
+Maybe we need burst mode?

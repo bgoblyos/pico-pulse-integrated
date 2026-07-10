@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "iC-NZN") (type "KiCad") (uri "${KIPRJMOD}/ul_IC-NZN-QFN24-4X4/KiCADv6") (options "") (descr ""))
+)
